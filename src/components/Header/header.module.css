@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: rgb(202, 228, 220);
+  padding: 10px;
+}
+
+i {
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.span {
+  font-size: 25px;
+}
+
+.logout {
+ 
+}

@@ -1,0 +1,18 @@
+.container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(192, 203, 207, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text {
+    margin-top: 20px;
+    color: rgb(25, 79, 142);
+    font-size: x-large; 
+    font-weight: 600;
+}
