@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.link {
+    background-color: rgb(39, 40, 40);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: aliceblue;
+    font-size: 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.description {
+    display: none;
+    max-width: 200px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.link:hover ~ .description {
+    display: flex;
+   
+}
+
+.link:hover  {
+    background-color: rgb(27, 200, 200);
+    color: rgb(2, 32, 58);
+    
+}

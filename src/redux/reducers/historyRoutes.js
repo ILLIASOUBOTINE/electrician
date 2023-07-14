@@ -1,19 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const historyRoutes = createSlice({
-    name: 'historyRoutes',
-    initialState: {
-        routes: ["/"]
+  name: "historyRoutes",
+  initialState: {
+    routes: ["/"],
+  },
+  reducers: {
+    addRoute: (state, actions) => {
+        state.routes.push(actions.payload);
+    //   state.routes = [...state.routes, actions.payload];
     },
-    reducers: {
-        addRoute: (state, actions) => {
-            state.routes = [...state.routes,(actions.payload)];
-        },
-       
+  },
+});
 
-    }
-})
-
-export const {addRoute} = historyRoutes.actions;
+export const { addRoute } = historyRoutes.actions;
 export default historyRoutes;

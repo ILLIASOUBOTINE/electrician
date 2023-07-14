@@ -5,7 +5,7 @@ import Header from '../Header'
 function Template({children}) {
   return (
     <div>
-        <Header/>
+        <Header />
         {children}
         
     </div>
