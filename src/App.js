@@ -10,20 +10,48 @@ import Header from "./components/Header";
 import Initial from "./components/Initial";
 import Template from "./components/Template.js";
 import Electricians from "./pages/Electricians";
+import ProfileElectr from "./pages/ProfileElectr";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <SpinLoading />
-       <Initial />
-        
+        <Initial />
+
         <Routes>
-          
-          <Route path="/login" element={<Template><Login /></Template>} />
-          <Route path="/register" element={<Template><Register /></Template>} />
-          <Route path="/" element={<Template><Home /></Template>} />
-          <Route path="electricians" element={<Template><Electricians /></Template>} />
+          <Route
+            path="/login"
+            element={
+              <Template>
+                <Login />
+              </Template>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <Template>
+                <Register />
+              </Template>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <Template>
+                <Home />
+              </Template>
+            }
+          />
+          <Route
+            path="electricians"
+            element={
+              <Template>
+                <Electricians />
+              </Template>
+            }
+          />
           <Route
             path="/profile"
             element={
@@ -31,7 +59,16 @@ function App() {
                 <Template>
                   <Profile />
                 </Template>
-                
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profileElectr"
+            element={
+              <ProtectedRoute>
+                <Template>
+                  <ProfileElectr />
+                </Template>
               </ProtectedRoute>
             }
           />

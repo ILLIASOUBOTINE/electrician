@@ -9,17 +9,26 @@ function ProtectedRoute({ children }) {
   const redirect = useNavigate();
   // const [user, setUser] = useState();
   const user = useSelector((state) => state.user.user);
-  
 
-  
+  useEffect(() => {
+    if (!user) {
+      redirect("/login");
+    }
+  }, [user]);
+
+  // if (user) {
+  //   return (
+  //     <div>
+  //       {children}
+  //     </div>
+  //   );
+  // } else {
+  //   redirect('/login');
+  // }
+
   return (
     <div>
-      {user && (
-        <>
-          
-          <div>{children}</div>
-        </>
-      )}
+      <div>{children}</div>
     </div>
   );
 }

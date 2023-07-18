@@ -8,7 +8,7 @@ function Home() {
       <LinkText title="Find an electrician" path="/electricians">
         To find the right electrician for your work Click on the button.
       </LinkText>
-      <LinkText title="Create an electrician account" path="/electricians">
+      <LinkText title="Create an electrician account" path="/profile">
         To create an electrician account you will need to click on the button
         and if you have not registered on the site yet you will have to
         register.

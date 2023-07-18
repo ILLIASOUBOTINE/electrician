@@ -37,7 +37,7 @@ function Login() {
         dispatch(addUser(response.data));
         localStorage.setItem("user", JSON.stringify(response.data));
         message.success(response.message);
-        redirect("/");
+        redirect("/profile");
       } else {
         throw new Error(response.message);
       }
@@ -50,8 +50,9 @@ function Login() {
     if (event.target === modalRef.current) {
       let prevPath = prevPaths[prevPaths.length - 2];
 
-      if (prevPath == "/login" || prevPath == "/register") {
+      if (prevPath === "/login" || prevPath === "/register" || prevPath === "/profile") {
         // console.log("ok");
+        // console.log(prevPath);
         redirect("/");
       } else {
         // console.log(prevPath);
